@@ -28,19 +28,12 @@
     </div>
   </div>
   <div class="col-md-4">
-    <label for="validationCustomUsername" class="form-label">Check-in</label>
+    <label for="validationCustomUsername" class="form-label">Checkin</label>
     <div class="input-group has-validation">
       <input type="date" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
       <div class="invalid-feedback">
         Insira um dia valido
       </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">Check-out</label>
-    <input type="date" class="form-control" id="validationCustom03" required>
-    <div class="invalid-feedback">
-      Insira um dia válido
     </div>
   </div>
   <div class="col-md-3">
@@ -72,7 +65,7 @@
     </div>
   </div>
   <div class="col-12">
-    <center><button class="btn btn-primary" type="submit">Submit form</button></center>
+    <center><button class="btn btn-primary" type="submit">Fazer Reserva</button></center>
   </div>
 </form>
     </section>
