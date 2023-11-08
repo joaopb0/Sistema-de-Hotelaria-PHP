@@ -22,7 +22,7 @@
             <div class="col">
                 <div class="card">
             <!-- Trocar por informações do Banco de dados e se necessario trocar o arquivo de html pra php -->
-            <img src="room1.jpg" class="card-img-top" alt="Quarto 234">
+            <img src="room1.jpg" class="card-img-top" alt="Quarto 1">
                     <div class="card-body">
                         <h5 class="card-title">Quarto Luxo</h5>
                         <p class="card-text">Descrição do quarto...</p>
