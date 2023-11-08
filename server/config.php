@@ -14,7 +14,7 @@
     if ($stmt->affected_rows > 0) {
     echo "Inserção bem-sucedida!";
     sleep(3);
-    header("Location:../client/index.php");
+    header("Location:../client/info.php");
     } else {
     echo "Erro ao inserir os dados: " . $conn->error;
     }
