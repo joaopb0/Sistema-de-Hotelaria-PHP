@@ -14,31 +14,27 @@
 
     </header>
     <section class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-        <form class="row g-3 needs-validation" action="../server/bookroom.php" method="POST">
-        <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">Nome</label>
-    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-    <div class="valid-feedback">
+    <form class="row g-3 needs-validation" action="../server/bookroom.php" method="POST">
+    <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="validationCustom01" name="nome" required>
+        <div class="valid-feedback"></div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">Email</label>
-    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-    <div class="valid-feedback">
+    <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Email</label>
+        <input type="text" class="form-control" id="validationCustom02" name="email" required>
+        <div class="valid-feedback"></div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustomUsername" class="form-label">Checkin</label>
-    <div class="input-group has-validation">
-      <input type="date" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-      <div class="invalid-feedback">
-        Insira um dia valido
-      </div>
+    <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label">Checkin</label>
+        <div class="input-group has-validation">
+            <input type="date" class="form-control" id="validationCustomUsername" name="checkin" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">Insira um dia válido</div>
+        </div>
     </div>
-  </div>
-  <div class="col-md-3">
-  <label for="quarto">Escolha o Quarto:</label>
-        <select class="form-control" id="quarto" name="quarto">
+    <div class="col-md-3">
+        <label for="quarto">Escolha o Quarto:</label>
+        <select class="form-control" id="quarto" name="quarto" required>
             <?php
             // Conectar ao banco de dados e recuperar os quartos disponíveis
             include("../server/connection.php");
@@ -51,31 +47,22 @@
             }
             ?>
         </select>
-    <div class="invalid-feedback">
-      Insira um dia válido
+        </div>
+    <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">Hóspedes</label>
+        <input type="number" class="form-control" id="validationCustom05" name="hospedes" required>
+        <div class="invalid-feedback">Insira um número de hóspedes</div>
     </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationCustom05" class="form-label">Hospedes</label>
-    <input type="number" class="form-control" id="validationCustom05" required>
-    <div class="invalid-feedback">
-      Insira um número de hospedes
+    <div class="col-12 d-flex justify-content-center text-center">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">Aceito os termos do hotel</label>
+            <div class="invalid-feedback">Você precisa aceitar os termos.</div>
+        </div>
     </div>
-  </div>
-  <div class="col-12 d-flex justify-content-center text-center">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
-        Aceito os termos do hotel
-      </label>
-      <div class="invalid-feedback">
-        Você precisa aceitar os termos.
-      </div>
+    <div class="col-12">
+        <center><button class="btn btn-primary" type="submit">Fazer Reserva</button></center>
     </div>
-  </div>
-  <div class="col-12">
-    <center><button class="btn btn-primary" type="submit">Fazer Reserva</button></center>
-  </div>
 </form>
     </section>
     <footer>
