@@ -37,11 +37,20 @@
     </div>
   </div>
   <div class="col-md-3">
-    <label for="validationCustom04" class="form-label">Quarto</label>
-    <select class="form-select" id="validationCustom04" required>
-      <option selected disabled value=""></option>
-      <option>1</option>
-    </select>
+  <label for="quarto">Escolha o Quarto:</label>
+        <select class="form-control" id="quarto" name="quarto">
+            <?php
+            // Conectar ao banco de dados e recuperar os quartos disponíveis
+            include("../server/connection.php");
+            $sql = "SELECT quarto FROM quartos"; // Supondo que 'disponivel' seja uma coluna que indica se o quarto está disponível
+            $result = $conn->query($sql);
+
+            // Exibir opções na lista suspensa
+            while ($row = $result->fetch_assoc()) {
+                echo "<option value='" . $row['quarto'] . "'>" . $row['quarto'] . "</option>";
+            }
+            ?>
+        </select>
     <div class="invalid-feedback">
       Insira um dia válido
     </div>

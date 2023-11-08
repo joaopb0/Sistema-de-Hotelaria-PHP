@@ -22,7 +22,7 @@
             <div class="col">
                 <div class="card">
             <!-- Trocar por informações do Banco de dados e se necessario trocar o arquivo de html pra php -->
-            <img src="room1.jpg" class="card-img-top" alt="Quarto 1">
+            <img src="room1.jpg" class="card-img-top" alt="Quarto 234">
                     <div class="card-body">
                         <h5 class="card-title">Quarto Luxo</h5>
                         <p class="card-text">Descrição do quarto...</p>
@@ -31,6 +31,7 @@
                     </div>
                 </div>
             </div>
+            <a href="roomavailable.php" class="btn btn-primary">Ver mais quartos</a>
             <!-- Se achar mais facil e necessario pode só replciar o código do card pra fazer mais quartos -->
         </section>
     </main>
