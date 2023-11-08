@@ -3,18 +3,22 @@
 
     $nome = $_POST['nome'];
     $contato = $_POST['contato'];
-    $quarto = $_quarto['quarto'];
-    $dia = $_dia['dia'];
+    $quarto = $_POST['quarto'];
+    $dia = $_POST['dia'];
 
-    $sql = "INSERT INTO nome_da_tabela (nome, contato, quarto, dia) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO reserva (nome, contato, quarto, dia) VALUES (?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssss", $nome, $contato, $contato, $dia); // 'ss' indica que estamos passando duas strings
+    $stmt->bind_param("ssss", $nome, $contato, $quarto, $dia); // os "s" indicam a quantidade de strings sendo passadas
     $stmt->execute();
-    $stmt->close();
 
     if ($stmt->affected_rows > 0) {
-        echo "Inserção bem-sucedida!";
+    echo "Inserção bem-sucedida!";
+    sleep(3);
+    header("Location:../client/index.html");
     } else {
-        echo "Erro ao inserir os dados: " . $conn->error;
+    echo "Erro ao inserir os dados: " . $conn->error;
     }
+
+    $stmt->close();
+    $conn->close();
     ?>
