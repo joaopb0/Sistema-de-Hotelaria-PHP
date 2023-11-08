@@ -14,7 +14,7 @@
 
     </header>
     <section class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-        <form class="row g-3 needs-validation" action="../server/config.php" method="POST">
+        <form class="row g-3 needs-validation" action="../server/bookroom.php" method="POST">
         <div class="col-md-4">
     <label for="validationCustom01" class="form-label">Nome</label>
     <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
