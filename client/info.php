@@ -25,6 +25,7 @@ if ($stmt) {
 
     die("Erro na consulta SQL: " . $conn->error);
 }
+//seleciona todos os quartos do banco de dados para organizar na página
 ?>
 
 <!DOCTYPE html>

@@ -36,12 +36,12 @@
         <label for="quarto">Escolha o Quarto:</label>
         <select class="form-control" id="quarto" name="quarto" required>
             <?php
-            // Conectar ao banco de dados e recuperar os quartos disponíveis
+
             include("../server/connection.php");
-            $sql = "SELECT quarto FROM quartos"; // Supondo que 'disponivel' seja uma coluna que indica se o quarto está disponível
+            $sql = "SELECT quarto FROM quartos"; 
             $result = $conn->query($sql);
 
-            // Exibir opções na lista suspensa
+            //exibe uma lista com os quartos disponiveis
             while ($row = $result->fetch_assoc()) {
                 echo "<option value='" . $row['quarto'] . "'>" . $row['quarto'] . "</option>";
             }

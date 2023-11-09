@@ -13,14 +13,13 @@
     </header>
     <section class="verquartos">
     <?php
-// Conectar ao banco de dados e recuperar os quartos disponíveis
+
 include("../server/connection.php");
 
-// Consulta SQL para selecionar quartos disponíveis
 $sql = "SELECT * FROM quartos";
 $result = $conn->query($sql);
 
-// Exibir os quartos disponíveis
+// exibe os quartos disponiveis
 while ($row = $result->fetch_assoc()) {
     echo "<div class='quarto'>";
     echo "<h2>Quarto #" . $row['quarto'] . "</h2>";
@@ -30,7 +29,6 @@ while ($row = $result->fetch_assoc()) {
     echo "</div>";
 }
 
-// Fechar a conexão com o banco de dados
 $conn->close();
 ?>
     </section>
