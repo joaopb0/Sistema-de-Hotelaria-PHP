@@ -24,6 +24,10 @@
                 <textarea class="form-control" id="descricao" name="descricao" rows="3" required></textarea>
             </div>
             <div class="mb-3">
+                <label for="valor" class="form-label">Valor</label>
+                <textarea class="form-control" id="valor" name="valor" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
                 <label for="imagem" class="form-label">Imagem do quarto:</label>
                 <input type="file" class="form-control" id="imagem" name="imagem" required>
             </div>

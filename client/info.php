@@ -5,7 +5,7 @@ include("../server/connection.php");
 $quarto = $_GET['quarto'];
 
 
-$sql = "SELECT quarto, descricao FROM quartos WHERE quarto = ?";
+$sql = "SELECT quarto, descricao, valor FROM quartos WHERE quarto = ?";
 $stmt = $conn->prepare($sql);
 
 
@@ -15,7 +15,7 @@ if ($stmt) {
 
     $stmt->execute();
 
-    $stmt->bind_result($numeroQuarto, $descricao);
+    $stmt->bind_result($numeroQuarto, $descricao, $valor);
 
     $stmt->fetch();
 
@@ -45,6 +45,7 @@ if ($stmt) {
         <h1>Informações do Quarto</h1>
         <p>Número do Quarto: <?php echo $quarto; ?></p>
         <p>Descrição do Quarto: <?php echo $descricao; ?></p>
+        <p>Valor do quarto: <?php echo $valor; ?></p>
         <!-- Outras informações que você deseja exibir -->
     </section>
 

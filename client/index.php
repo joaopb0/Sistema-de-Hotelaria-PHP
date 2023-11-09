@@ -32,6 +32,9 @@
                 </div>
             </div>
             <a href="roomavailable.php" class="btn btn-primary">Ver mais quartos</a>
+            <div>
+            <a href="../server/admin.php" class="btn btn-primary">Painel admin</a>
+            </div>
             <!-- Se achar mais facil e necessario pode só replciar o código do card pra fazer mais quartos -->
         </section>
     </main>
